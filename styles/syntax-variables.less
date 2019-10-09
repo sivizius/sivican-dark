@@ -1,56 +1,52 @@
 @import "colors.less";
 
-// Official Syntax Variables -----------------------------------
+//  General Colours
+@syntax-text-color:                       @syntax-fg;
+@syntax-cursor-color:                     @syntax-accent;
+@syntax-selection-color:                  #840;
+@syntax-selection-flash-color:            @syntax-accent;
+@syntax-background-color:                 @syntax-bg;
 
-// General colors
-@syntax-text-color:            @syntax-fg;
-@syntax-cursor-color:          @syntax-accent;
-@syntax-selection-color:       lighten(@syntax-background-color, 10%);
-@syntax-selection-flash-color: @syntax-accent;
-@syntax-background-color:      @syntax-bg;
+//  Guide Colours
+@syntax-wrap-guide-color:                 @syntax-guide;
+@syntax-indent-guide-color:               @syntax-guide;
+@syntax-invisible-character-color:        @syntax-guide;
 
-// Guide colors
-@syntax-wrap-guide-color:          @syntax-guide;
-@syntax-indent-guide-color:        @syntax-guide;
-@syntax-invisible-character-color: @syntax-guide;
+//  For Find And Replace Markers
+@syntax-result-marker-color:              fade(@syntax-accent, 24%);
+@syntax-result-marker-color-selected:     @syntax-accent;
 
-// For find and replace markers
-@syntax-result-marker-color:          fade(@syntax-accent, 24%);
-@syntax-result-marker-color-selected: @syntax-accent;
-
-// Gutter colors
+//  Gutter Colours
 @syntax-gutter-text-color:                @syntax-gutter;
 @syntax-gutter-text-color-selected:       @syntax-fg;
-@syntax-gutter-background-color:          @syntax-bg; // unused
+@syntax-gutter-background-color:          @syntax-bg;                           // not in use
 @syntax-gutter-background-color-selected: lighten(@syntax-bg, 8%);
 
-// Git colors - For git diff info. i.e. in the gutter
-@syntax-color-renamed:  hsl(208, 100%, 60%);
-@syntax-color-added:    hsl(150,  60%, 54%);
-@syntax-color-modified: hsl(40,   60%, 70%);
-@syntax-color-removed:  hsl(0,    70%, 60%);
+//  Git Colours
+@syntax-color-renamed:                    #08f;
+@syntax-color-added:                      #4f4;
+@syntax-color-modified:                   #ff0;
+@syntax-color-removed:                    #888;
 
-// For language entity colors
-@syntax-color-variable:   @hue-5;
-@syntax-color-constant:   @hue-6;
-@syntax-color-property:   @syntax-fg;
-@syntax-color-value:      @syntax-fg;
-@syntax-color-function:   @hue-2;
-@syntax-color-method:     @hue-2;
-@syntax-color-class:      @hue-6-2;
-@syntax-color-keyword:    @hue-3;
-@syntax-color-tag:        @hue-5;
-@syntax-color-attribute:  @hue-6;
-@syntax-color-import:     @hue-3;
-@syntax-color-snippet:    @hue-4;
+//  Colours Of Language Entities
+@syntax-color-variable:                   @hue-5;
+@syntax-color-constant:                   @hue-6;
+@syntax-color-property:                   @syntax-fg;
+@syntax-color-value:                      @syntax-fg;
+@syntax-color-function:                   @hue-2;
+@syntax-color-method:                     @hue-2;
+@syntax-color-class:                      @hue-6-2;
+@syntax-color-keyword:                    @hue-3;
+@syntax-color-tag:                        @hue-5;
+@syntax-color-attribute:                  @hue-6;
+@syntax-color-import:                     @hue-3;
+@syntax-color-snippet:                    @hue-4;
 
 
-// Custom Syntax Variables -----------------------------------
-// Don't use in packages
-
-@syntax-cursor-line: hsla(@syntax-hue, 100%,  80%, .04); // needs to be semi-transparent to show search results
-
-@syntax-deprecated-fg: darken(@syntax-color-modified, 50%);
-@syntax-deprecated-bg: @syntax-color-modified;
-@syntax-illegal-fg:    white;
-@syntax-illegal-bg:    @syntax-color-removed;
+//  Custom Syntax Variables
+//  Do Not Use In Packages!
+@syntax-cursor-line:                      #00f0;                                // needs to be semi-transparent to show search results
+@syntax-deprecated-fg:                    #ff8);
+@syntax-deprecated-bg:                    @syntax-color-modified;
+@syntax-illegal-fg:                       #fff;
+@syntax-illegal-bg:                       @syntax-color-removed;

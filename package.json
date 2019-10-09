@@ -1,16 +1,18 @@
 {
-  "name": "one-dark-syntax",
-  "theme": "syntax",
-  "version": "1.8.4",
-  "description": "A dark syntax theme",
-  "keywords": [
+  "name":         "sivican-dark",
+  "theme":        "syntax",
+  "version":      "1.0.0",
+  "description":  "A dark high contrast syntax theme",
+  "keywords":
+  [
     "dark",
-    "blue",
+    "contrast",
     "syntax"
   ],
-  "repository": "https://github.com/atom/one-dark-syntax",
-  "license": "MIT",
-  "engines": {
-    "atom": ">0.50.0"
+  "repository":   "https://github.com/sivizius/sivican-dark",
+  "license":      "MIT",
+  "engines":
+  {
+    "atom":       ">0.50.0"
   }
 }
