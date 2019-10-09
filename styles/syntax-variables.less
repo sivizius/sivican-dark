@@ -3,7 +3,7 @@
 //  General Colours
 @syntax-text-color:                       @syntax-fg;
 @syntax-cursor-color:                     @syntax-accent;
-@syntax-selection-color:                  #840;
+@syntax-selection-color:                  fade(@syntax-accent, 15%);
 @syntax-selection-flash-color:            @syntax-accent;
 @syntax-background-color:                 @syntax-bg;
 
@@ -13,20 +13,20 @@
 @syntax-invisible-character-color:        @syntax-guide;
 
 //  For Find And Replace Markers
-@syntax-result-marker-color:              fade(@syntax-accent, 24%);
+@syntax-result-marker-color:              fade(@syntax-accent, 10%);
 @syntax-result-marker-color-selected:     @syntax-accent;
 
 //  Gutter Colours
 @syntax-gutter-text-color:                @syntax-gutter;
 @syntax-gutter-text-color-selected:       @syntax-fg;
 @syntax-gutter-background-color:          @syntax-bg;                           // not in use
-@syntax-gutter-background-color-selected: lighten(@syntax-bg, 8%);
+@syntax-gutter-background-color-selected: @syntax-bg;
 
 //  Git Colours
 @syntax-color-renamed:                    #08f;
-@syntax-color-added:                      #4f4;
-@syntax-color-modified:                   #ff0;
-@syntax-color-removed:                    #888;
+@syntax-color-added:                      #ff4;
+@syntax-color-modified:                   #44f;
+@syntax-color-removed:                    #f44;
 
 //  Colours Of Language Entities
 @syntax-color-variable:                   @hue-5;
@@ -42,11 +42,10 @@
 @syntax-color-import:                     @hue-3;
 @syntax-color-snippet:                    @hue-4;
 
-
 //  Custom Syntax Variables
 //  Do Not Use In Packages!
 @syntax-cursor-line:                      #00f0;                                // needs to be semi-transparent to show search results
-@syntax-deprecated-fg:                    #ff8);
+@syntax-deprecated-fg:                    #ff8;
 @syntax-deprecated-bg:                    @syntax-color-modified;
 @syntax-illegal-fg:                       #fff;
 @syntax-illegal-bg:                       @syntax-color-removed;
