@@ -1,0 +1,1126 @@
+'.source.rust':
+  '_':
+    'prefix': '_'
+    'body': '''
+      _ $2=>  ${1:statements},
+    '''
+  '__':
+    'prefix': '__'
+    'body': '''
+      _
+      =>  ${1:statements},
+    '''
+  'afn':
+    'prefix': 'afn'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      async fn      ${1:function_name}
+      (
+      \t$2
+      )
+      {
+      \t${3:unimplemented!()}
+      }
+    '''
+  'afnr':
+    'prefix': 'afnr'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      async fn      ${1:function_name}
+      (
+      \t$2
+      )
+      ->  ${3:TypeName}
+      {
+      \t${4:unimplemented!()}
+      }
+    '''
+  'afnrw':
+    'prefix': 'afnrw'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      async fn      ${1:function_name}
+      (
+      \t$2
+      )
+      ->  ${3:TypeName}
+      where
+      \t${4:Parameter}: $6${5:Trait},$7
+      {
+      \t${8:unimplemented!()}
+      }
+    '''
+  'afns':
+    'prefix': 'afns'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      async fn      ${1:function_name}
+      (
+      \t${2:mut }self,
+      \t$3
+      )
+      {
+      \t${4:unimplemented!()}
+      }
+    '''
+  'afnsr':
+    'prefix': 'afnsr'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      async fn      ${1:function_name}
+      (
+      \t${2:mut }self,
+      \t$3
+      )
+      ->  ${4:TypeName}
+      {
+      \t${5:unimplemented!()}
+      }
+    '''
+  'afnsrw':
+    'prefix': 'afnsrw'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      async fn      ${1:function_name}
+      (
+      \t${2:mut }self,
+      \t$3
+      )
+      ->  ${4:TypeName}
+      where
+      \t${5:Parameter}: $7${6:Trait},$8
+      {
+      \t${9:unimplemented!()}
+      }
+    '''
+  'afnsw':
+    'prefix': 'afnsw'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      async fn      ${1:function_name}
+      (
+      \t${2:mut }self,
+      \t$3
+      )
+      where
+      \t${4:Parameter}: $6${5:Trait},$7
+      {
+      \t${8:unimplemented!()}
+      }
+    '''
+  'afnw':
+    'prefix': 'afnw'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      async fn      ${1:function_name}
+      (
+      \t$2
+      )
+      where
+      \t${3:Parameter}: $5${4:Trait},$6
+      {
+      \t${7:unimplemented!()}
+      }
+    '''
+  'allow':
+    'prefix': 'allow'
+    'body': '''
+      #[allow(${1:lint})]
+    '''
+  'allow!':
+    'prefix': 'allow!'
+    'body': '''
+      #![allow(${1:lint})]
+    '''
+  'case':
+    'prefix': 'case'
+    'body': '''
+      ${1:pattern}  $3=>  ${2:statements},
+    '''
+  'casen':
+    'prefix': 'casen'
+    'body': '''
+      ${1:pattern}
+      =>  ${2:statements},
+    '''
+  'class':
+    'prefix': 'class'
+    'body': '''
+      /// `${1:TypeName}` …
+      struct        ${1:TypeName}
+      {
+      \t$2
+      }
+
+      /// Constructor for `${1:TypeName}` …
+      ///
+      /// # Arguments
+      /// * `` –
+      fn            ${1:TypeName}
+      (
+      \t$3
+      )
+      ->  ${1:TypeName}
+      {
+      \t${1:TypeName}
+      \t{
+      \t\t$3
+      \t}
+      }
+
+      impl          ${1:TypeName}
+      {
+      \t$4
+      }
+    '''
+  'const':
+    'prefix': 'const'
+    'body': '''
+      /// …
+      const       ${1:CONSTANT}:  $4${2:TypeName} =   ${3:value};
+    '''
+  'deny':
+    'prefix': 'deny'
+    'body': '''
+      #[deny(${1:lint})]
+    '''
+  'deny!':
+    'prefix': 'deny!'
+    'body': '''
+      #![deny(${1:lint})]
+    '''
+  'derive':
+    'prefix': 'derive'
+    'body': '''
+      #[derive(${1:Trait})]
+    '''
+  'elif':
+    'prefix': 'elif'
+    'body': '''
+      else  if  ${1:expression}
+      {
+      \t${2:unimplemented!()}
+      }
+    '''
+  'elifl':
+    'prefix': 'elifl'
+    'body': '''
+      else  if  let ${1:pattern}  $3=   ${2:expression}
+      {
+      \t${4:unimplemented!()}
+      }
+    '''
+  'else':
+    'prefix': 'else'
+    'body': '''
+      else
+      {
+      \t${1:unimplemented!()}
+      }
+    '''
+  'enum':
+    'prefix': 'enum'
+    'body': '''
+      /// …
+      enum          ${1:TypeName}
+      {
+      \t$2
+      }
+    '''
+  'fn':
+    'prefix': 'fn'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      fn            ${1:function_name}
+      (
+      \t$2
+      )
+      {
+      \t${3:unimplemented!()}
+      }
+    '''
+  'fnr':
+    'prefix': 'fnr'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      fn            ${1:function_name}
+      (
+      \t$2
+      )
+      ->  ${3:TypeName}
+      {
+      \t${4:unimplemented!()}
+      }
+    '''
+  'fnrw':
+    'prefix': 'fnrw'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      fn            ${1:function_name}
+      (
+      \t$2
+      )
+      ->  ${3:TypeName}
+      where
+      \t${4:Parameter}: $6${5:Trait},$7
+      {
+      \t${8:unimplemented!()}
+      }
+    '''
+  'fns':
+    'prefix': 'fns'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      fn            ${1:function_name}
+      (
+      \t${2:mut }self,
+      \t$3
+      )
+      {
+      \t${4:unimplemented!()}
+      }
+    '''
+  'fnsr':
+    'prefix': 'fnsr'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      fn            ${1:function_name}
+      (
+      \t${2:mut }self,
+      \t$3
+      )
+      ->  ${4:TypeName}
+      {
+      \t${5:unimplemented!()}
+      }
+    '''
+  'fnsrw':
+    'prefix': 'fnsrw'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      fn            ${1:function_name}
+      (
+      \t${2:mut }self,
+      \t$3
+      )
+      ->  ${4:TypeName}
+      where
+      \t${5:Parameter}: $7${6:Trait},$8
+      {
+      \t${9:unimplemented!()}
+      }
+    '''
+  'fnsw':
+    'prefix': 'fnsw'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      fn            ${1:function_name}
+      (
+      \t${2:mut }self,
+      \t$3
+      )
+      where
+      \t${4:Parameter}: $6${5:Trait},$7
+      {
+      \t${8:unimplemented!()}
+      }
+    '''
+  'fnw':
+    'prefix': 'fnw'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      fn            ${1:function_name}
+      (
+      \t$2
+      )
+      where
+      \t${3:Parameter}: $5${4:Trait},$6
+      {
+      \t${7:unimplemented!()}
+      }
+    '''
+  'for':
+    'prefix': 'for'
+    'body': '''
+      for ${1:variable} $4in  ${2:iterator}
+      {
+      \t${3:unimplemented!()}
+      }
+    '''
+  'for>':
+    'prefix': 'for>'
+    'body': '''
+      for ${1:variable} $4in  ${2:from} ..  ${3:to}
+      {
+      \t${5:unimplemented!()}
+      }
+    '''
+  'for=':
+    'prefix': 'for='
+    'body': '''
+      for ${1:variable} $4in  ${2:from} ..= ${3:to}
+      {
+      \t${5:unimplemented!()}
+      }
+    '''
+  'if':
+    'prefix': 'if'
+    'body': '''
+      if  ${1:expression}
+      {
+      \t${2:unimplemented!()}
+      }
+    '''
+  'ifl':
+    'prefix': 'ifl'
+    'body': '''
+      if  let ${1:pattern}  $3= ${2:expression}
+      {
+      \t${4:unimplemented!()}
+      }
+    '''
+  'impl':
+    'prefix': 'impl'
+    'body': '''
+      impl          ${1:TypeName}
+      {
+      \t$2
+      }
+    '''
+  'implf':
+    'prefix': 'implf'
+    'body': '''
+      impl          ${1:TypeName} $3for ${2:TypeName}
+      {
+      \t$4
+      }
+    '''
+  'implfw':
+    'prefix': 'implfw'
+    'body': '''
+      impl          ${1:TypeName} $3for ${2:TypeName}
+      where
+      \t${4:Parameter}: $6${5:Trait},$7
+      {
+      \t$8
+      }
+    '''
+  'implw':
+    'prefix': 'implw'
+    'body': '''
+      impl          ${1:TypeName}
+      where
+      \t${2:Parameter}: $4${3:Trait},$5
+      {
+      \t$6
+      }
+    '''
+  'let':
+    'prefix': 'let'
+    'body': '''
+      let     ${1:variable} $3=   ${2:value};
+    '''
+  'letif':
+    'prefix': 'letif'
+    'body': '''
+      let     ${1:variable}
+      = if  ${2:expression}
+        {
+        \t{3:unimplemented!()}
+        };
+    '''
+  'letloop':
+    'prefix': 'letloop'
+    'body': '''
+      let     ${1:variable}
+      = loop
+        {
+        \t{2:unimplemented!()}
+        };
+    '''
+  'letm':
+    'prefix': 'letm'
+    'body': '''
+      let mut ${1:variable} $3=   ${2:value};
+    '''
+  'letmatch':
+    'prefix': 'letmatch'
+    'body': '''
+      let     ${1:variable}
+      = match ${2:expression}
+        {
+        \t${3:patterns}
+        };
+    '''
+  'letmif':
+    'prefix': 'letmif'
+    'body': '''
+      let mut ${1:variable}
+      = if  ${2:expression}
+        {
+        \t{3:unimplemented!()}
+        };
+    '''
+  'letmloop':
+    'prefix': 'letmloop'
+    'body': '''
+      let mut ${1:variable}
+      = loop
+        {
+        \t{2:unimplemented!()}
+        };
+    '''
+  'letmmatch':
+    'prefix': 'letmmatch'
+    'body': '''
+      let mut ${1:variable}
+      = match ${2:expression}
+        {
+        \t${3:patterns}
+        };
+    '''
+  'loop':
+    'prefix': 'loop'
+    'body': '''
+      loop
+      {
+      \t${1:unimplemented!()}
+      }
+    '''
+  'loopl':
+    'prefix': 'loopl'
+    'body': '''
+      '${1:Label}:
+      loop
+      {
+      \t${2:unimplemented!()}
+      }
+    '''
+  'macro':
+    'prefix': 'macro'
+    'body': '''
+      /// …
+      macro_rules!  ${1:macro_name}
+      {
+      \t(${2:pattern})  $4=> ${3:statements};
+      }
+    '''
+  'main':
+    'prefix': 'main'
+    'body': '''
+      /// Entry Point.
+      fn main ()
+      ->  Result
+          <
+            (),
+            String,
+          >
+      {
+      \t${1:unimplemented!()}
+      }
+    '''
+  'match':
+    'prefix': 'match'
+    'body': '''
+      match ${1:expression}
+      {
+      \t${2:patterns}
+      }
+    '''
+  'mcase':
+    'prefix': 'mcase'
+    'body': '''
+      (${1:pattern})  $3=>  ${2:statements};
+    '''
+  'mcasen':
+    'prefix': 'mcasen'
+    'body': '''
+      (${1:pattern})
+      =>  ${2:statements};
+    '''
+  'new':
+    'prefix': 'new'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      fn            ${1:function_name}
+      (
+      \t$2
+      )
+      ->  ${3:TypeName}
+      {
+      \t${3:TypeName}
+      \t{
+      \t\t${4:unimplemented!()}
+      \t}
+      }
+    '''
+  'neww':
+    'prefix': 'neww'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      fn            ${1:function_name}
+      (
+      \t$2
+      )
+      ->  ${3:TypeName}
+      where
+      \t${4:Parameter}: $6${5:Trait},$7
+      {
+      \t${3:TypeName}
+      \t{
+      \t\t${8:unimplemented!()}
+      \t}
+      }
+    '''
+  'pafn':
+    'prefix': 'pafn'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      pub async fn  ${1:function_name}
+      (
+      \t$2
+      )
+      {
+      \t${3:unimplemented!()}
+      }
+    '''
+  'pafnr':
+    'prefix': 'pafnr'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      pub async fn  ${1:function_name}
+      (
+      \t$2
+      )
+      ->  ${3:TypeName}
+      {
+      \t${4:unimplemented!()}
+      }
+    '''
+  'pafnrw':
+    'prefix': 'pafnrw'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      pub async fn  ${1:function_name}
+      (
+      \t$2
+      )
+      ->  ${3:TypeName}
+      where:
+      \t${4:Parameter}: $6${5:Trait},$7
+      {
+      \t${8:unimplemented!()}
+      }
+    '''
+  'pafns':
+    'prefix': 'pafns'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      pub async fn  ${1:function_name}
+      (
+      \t${2:mut }self,
+      \t$3
+      )
+      {
+      \t${4:unimplemented!()}
+      }
+    '''
+  'pafnsr':
+    'prefix': 'pafnsr'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      pub async fn  ${1:function_name}
+      (
+      \t${2:mut }self,
+      \t$3
+      )
+      ->  ${4:TypeName}
+      {
+      \t${5:unimplemented!()}
+      }
+    '''
+  'pafnsw':
+    'prefix': 'pafnsw'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      pub async fn  ${1:function_name}
+      (
+      \t${2:mut }self,
+      \t$3
+      )
+      where:
+      \t${4:Parameter}: $6${5:Trait},$7
+      {
+      \t${8:unimplemented!()}
+      }
+    '''
+  'pafnsrw':
+    'prefix': 'pafnsrw'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      pub async fn  ${1:function_name}
+      (
+      \t${2:mut }self,
+      \t$3
+      )
+      ->  ${4:TypeName}
+      where:
+      \t${5:Parameter}: $7${6:Trait},$8
+      {
+      \t${9:unimplemented!()}
+      }
+    '''
+  'pafnw':
+    'prefix': 'pafnw'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      pub async fn  ${1:function_name}
+      (
+      \t$2
+      )
+      where:
+      \t${3:Parameter}: $5${4:Trait},$6
+      {
+      \t${7:unimplemented!()}
+      }
+    '''
+  'pclass':
+    'prefix': 'pclass'
+    'body': '''
+      /// …
+      pub struct    ${1:TypeName}
+      {
+      \t$2
+      }
+
+      /// Constructor for `${1:TypeName}` …
+      ///
+      /// # Arguments
+      /// * `` –
+      pub fn  ${1:TypeName}
+      (
+      \t$2
+      )
+      ->  ${1:TypeName}
+      {
+      \t${1:TypeName}
+      \t{
+      \t\t$2
+      \t}
+      }
+
+      impl          ${1:TypeName}
+      {
+      \t$3
+      }
+    '''
+  'pconst':
+    'prefix': 'pconst'
+    'body': '''
+      /// …
+      pub const   ${1:CONSTANT}:  $4${2:TypeName} =   ${3:value};
+    '''
+  'penum':
+    'prefix': 'penum'
+    'body': '''
+      /// …
+      pub enum      ${1:TypeName}
+      {
+      \t$2
+      }
+    '''
+  'pfn':
+    'prefix': 'pfn'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      pub fn        ${1:function_name}
+      (
+      \t$2
+      )
+      {
+      \t${3:unimplemented!()}
+      }
+    '''
+  'pfnr':
+    'prefix': 'pfnr'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      pub fn        ${1:function_name}
+      (
+      \t$2
+      )
+      ->  ${3:TypeName}
+      {
+      \t${4:unimplemented!()}
+      }
+    '''
+  'pfnrw':
+    'prefix': 'pfnrw'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      pub fn        ${1:function_name}
+      (
+      \t$2
+      )
+      ->  ${3:TypeName}
+      where:
+      \t${4:Parameter}: $6${5:Trait},$7
+      {
+      \t${8:unimplemented!()}
+      }
+    '''
+  'pfns':
+    'prefix': 'pfns'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      pub fn        ${1:function_name}
+      (
+      \t${2:mut }self,
+      \t$3
+      )
+      {
+      \t${4:unimplemented!()}
+      }
+    '''
+  'pfnsr':
+    'prefix': 'pfnsr'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      pub fn        ${1:function_name}
+      (
+      \t${2:mut }self,
+      \t$3
+      )
+      ->  ${4:TypeName}
+      {
+      \t${5:unimplemented!()}
+      }
+    '''
+  'pfnsw':
+    'prefix': 'pfnsw'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      pub fn        ${1:function_name}
+      (
+      \t${2:mut }self,
+      \t$3
+      )
+      where:
+      \t${4:Parameter}: $6${5:Trait},$7
+      {
+      \t${8:unimplemented!()}
+      }
+    '''
+  'pfnsrw':
+    'prefix': 'pfnsrw'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      pub fn        ${1:function_name}
+      (
+      \t${2:mut }self,
+      \t$3
+      )
+      ->  ${4:TypeName}
+      where:
+      \t${5:Parameter}: $7${6:Trait},$8
+      {
+      \t${9:unimplemented!()}
+      }
+    '''
+  'pfnw':
+    'prefix': 'pfnw'
+    'body': '''
+      /// …
+      ///
+      /// # Arguments
+      /// * `` –
+      pub fn        ${1:function_name}
+      (
+      \t$2
+      )
+      where:
+      \t${3:Parameter}: $5${4:Trait},$6
+      {
+      \t${7:unimplemented!()}
+      }
+    '''
+  'pnew':
+    'prefix': 'new'
+    'body': '''
+      /// Constructor for `${3:TypeName}` …
+      ///
+      /// # Arguments
+      /// * `` –
+      pub fn        ${1:function_name}
+      (
+      \t$2
+      )
+      ->  ${3:TypeName}
+      {
+      \t${3:TypeName}
+      \t{
+      \t\t${4:unimplemented!()}
+      \t}
+      }
+    '''
+  'pneww':
+    'prefix': 'neww'
+    'body': '''
+      /// Constructor for `${3:TypeName}` …
+      ///
+      /// # Arguments
+      /// * `` –
+      pub fn        ${1:function_name}
+      (
+      \t$2
+      )
+      ->  ${3:TypeName}
+      where
+      \t${4:Parameter}: $6${5:Trait},$7
+      {
+      \t${3:TypeName}
+      \t{
+      \t\t${8:unimplemented!()}
+      \t}
+      }
+    '''
+  'print':
+    'prefix': 'print'
+    'body': '''
+      print!    ( "${1:{${2::?}\\}}", ${3}, );
+    '''
+  'println':
+    'prefix': 'println'
+    'body': '''
+      println!  ( "${1:{${2::?}\\}}", ${3}, );
+    '''
+  'pstatic':
+    'prefix': 'pstatic'
+    'body': '''
+      /// …
+      pub static  ${1:CONSTANT}:  $4${2:TypeName} =   ${3:value};
+    '''
+  'pstruct':
+    'prefix': 'pstruct'
+    'body': '''
+      /// …
+      pub struct    ${1:TypeName}
+      {
+      \t$2
+      }
+    '''
+  'ptrait':
+    'prefix': 'ptrait'
+    'body': '''
+      /// …
+      pub trait     ${1:TypeName}
+      {
+      \t$2
+      }
+    '''
+  'ptstruct':
+    'prefix': 'ptstruct'
+    'body': '''
+      /// …
+      pub struct  ${1:TypeName} $3${2:TypeName};
+    '''
+  'ptype':
+    'prefix': 'ptype'
+    'body': '''
+      /// …
+      pub type    ${1:TypeName} $3=   ${2:TypeName};
+    '''
+  'static':
+    'prefix': 'static'
+    'body': '''
+      /// …
+      static      ${1:CONSTANT}:  $4${2:TypeName} =   ${3:value};
+    '''
+  'struct':
+    'prefix': 'struct'
+    'body': '''
+      /// …
+      struct        ${1:TypeName}
+      {
+      \t$2
+      }
+    '''
+  'test':
+    'prefix': 'test'
+    'body': '''
+      /// Test …
+      #[test]
+      fn            ${1:test_name}  ()
+      {
+      \t${2:unimplemented!()}
+      }
+    '''
+  'testmod':
+    'prefix': 'testmod'
+    'body': '''
+      #[cfg(test)]
+      mod           tests
+      {
+      \tuse super::*;
+      \t/// Test …
+      \t#[test]
+      \tfn            ${1:test_name}  ()
+      \t{
+      \t\t${2:unimplemented!()}
+      \t}
+      }
+    '''
+  'trait':
+    'prefix': 'trait'
+    'body': '''
+      /// …
+      trait         ${1:TypeName}
+      {
+      \t$2
+      }
+    '''
+  'tstruct':
+    'prefix': 'tstruct'
+    'body': '''
+      /// …
+      struct      ${1:TypeName} $3${2:TypeName};
+    '''
+  'type':
+    'prefix': 'type'
+    'body': '''
+      /// …
+      type        ${1:TypeName}  $3=   ${2:TypeName};
+    '''
+  'use':
+    'prefix': 'use'
+    'body': '''
+      use
+      {
+      \t${1:Module}::${2:Object},
+      };
+    '''
+  'warn':
+    'prefix': 'warn'
+    'body': '''
+      #[warn(${1:lint})]
+    '''
+  'warn!':
+    'prefix': 'warn!'
+    'body': '''
+      #![warn(${1:lint})]
+    '''
+  'while':
+    'prefix': 'while'
+    'body': '''
+      while ${1:expression}
+      {
+      \t${2:unimplemented!()}
+      }
+    '''
+  'whilel':
+    'prefix': 'whilel'
+    'body': '''
+      while let ${1:pattern}  $3=   ${2:expression}
+      {
+      \t${4:unimplemented!()}
+      }
+    '''
